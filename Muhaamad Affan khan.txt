@@ -1,0 +1,139 @@
+#include<iostream>
+using namespace std;
+
+void perpostion (string p,  string type,string q,)
+{
+	
+	else if(type=="converse")
+	{
+		cout<<"converse"<<p<<"-->"<<q<<endl;
+		if(p=="p" && q=="q")
+		{
+			cout<<"implication"<<q<<"-->"<<p<<endl;
+			cout<<" inverse"<<"-"<<q<<"-->-"<<p<<endl;
+			cout<<" contrapositive"<<"-"<<p<<"-->-"<<q<<endl;
+		}
+		else if(p=="-p"&&q=="q")
+		{
+			cout<<"implication"<<q<<"-->"<<p<<endl;
+			cout<<"inverse"<<q<<"-->-"<<p<<endl;
+			cout<<" contrapositive"<<"-"<<p<<"-->"<<q<<endl;		
+		}
+		else if(p=="p"&&q=="-q")
+		{
+			cout<<" implication "<<q<<"-->"<<p<<endl;
+			cout<<" inverse"<<"-"<<q<<"-->"<<p<<endl;
+			cout<<" contrapositive"<<p<<"-->-"<<q<<endl;	
+	    }
+		else if(p=="-p" && q=="-q")
+		{
+			cout<<" implication"<<q<<"-->"<<p<<endl;
+			cout<<"inverse "<<q<<"-->"<<p<<endl;
+			cout<<" contrapositive "<<p<<"-->"<<q<<endl;		
+		}
+	}
+if(type=="implication")
+	{
+		cout<<"The implication is ="<<p<<"-->"<<q<<endl;
+		if(p=="p" && q=="q")
+		{
+			cout<<"converse="<<q<<"-->"<<p<<endl;
+			cout<<"inverse"<<"-"<<p<<"-->-"<<q<<endl;
+			cout<<"contrapositive"<<"-"<<q<<"-->-"<<p<<endl;
+		}
+		else if(p=="-p"&&q=="q")
+		{
+			cout<<"converse ="<<q<<"-->"<<p<<endl;
+			cout<<" inverse ="<<p<<"-->-"<<q<<endl;
+			cout<<" contrapositive ="<<"-"<<q<<"-->"<<p<<endl;		
+		}
+else if(p=="-p" && q=="-q")
+		{
+			cout<<"converse "<<q<<"-->"<<p<<endl;
+			cout<<" inverse "<<p<<"-->"<<q<<endl;
+			cout<<" contrapositive "<<q<<"-->"<<p<<endl;		
+		}
+		else if(p=="p"&&q=="-q")
+		{
+			cout<<"converse"<<q<<"-->"<<p<<endl;
+			cout<<"inverse"<<"-"<<p<<"-->"<<q<<endl;
+			cout<<"contrapositive"<<q<<"-->-"<<p<<endl;	
+	    }
+		
+	}
+	else if(type=="inverse")
+	{
+		cout<<" inverse"<<p<<"-->"<<q<<endl;
+		if(p=="p" && q=="q")
+		{
+			cout<<"converse"<<q<<"-->"<<p<<endl;
+			cout<<" implication "<<"-"<<p<<"-->-"<<q<<endl;
+			cout<<" contrapositive "<<"-"<<q<<"-->-"<<p<<endl;
+		}
+		
+		else if(p=="p"&&q=="-q")
+		{
+			cout<<"converse"<<q<<"-->"<<p<<endl;
+			cout<<" implication"<<"-"<<p<<"-->"<<q<<endl;
+			cout<<"contrapositive"<<q<<"-->-"<<p<<endl;	
+	    }
+		else if(p=="-p" && q=="-q")
+		{
+			cout<<"converse"<<q<<"-->"<<p<<endl;
+			cout<<" implication "<<p<<"-->"<<q<<endl;
+			cout<<" contrapositive "<<q<<"-->"<<p<<endl;		
+		
+	}
+else if(p=="-p"&&q=="q")
+		{
+			cout<<" converse "<<q<<"-->"<<p<<endl;
+			cout<<" implication"<<p<<"-->-"<<q<<endl;
+			cout<<" contrapositive "<<"-"<<q<<"-->"<<p<<endl;		
+		}
+}
+	else if(type=="contrapositive")
+	{
+		cout<<"The contrapositive="<<p<<"-->"<<q<<endl;
+		if(p=="p" && q=="q")
+		{
+			cout<<"inverse "<<q<<"-->"<<p<<endl;
+			cout<<" converse "<<"-"<<p<<"-->-"<<q<<endl;
+			cout<<" implication "<<"-"<<q<<"-->-"<<p<<endl;
+		}
+		else if(p=="-p"&&q=="q")
+		{
+			cout<<" inverse"<<q<<"-->"<<p<<endl;
+			cout<<" converse "<<p<<"-->-"<<q<<endl;
+			cout<<" implication"<<"-"<<q<<"-->"<<p<<endl;		
+		}
+else if(p=="-p" && q=="-q")
+		{
+			cout<<" inverse "<<q<<"-->"<<p<<endl;
+			cout<<" converse "<<p<<"-->"<<q<<endl;
+			cout<<" implication "<<q<<"-->"<<p<<endl;		
+		}
+		else if(p=="p"&&q=="-q")
+		{
+			cout<<"innverse"<<q<<"-->"<<p<<endl;
+			cout<<" converse "<<"-"<<p<<"-->"<<q<<endl;
+			cout<<" implication "<<q<<"-->-"<<p<<endl;	
+	    }
+		
+  }
+  else
+  {
+  	cout<<"Enter the right entry";
+  }
+  
+}
+
+int main()
+{
+	string q,type,p;
+	cout<<"Enter the type of preposition";
+	cin>>type;
+	cout<<"Enter the preposition e.g(use '-' for negation)";
+	cin>>p>>q;	
+	perpostion(p,q,type);
+	return 0;
+}
